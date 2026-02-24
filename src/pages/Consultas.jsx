@@ -31,10 +31,15 @@ function Consultas() {
     const consultasSalvas =
       JSON.parse(localStorage.getItem("consultas")) || [];
 
-    const novaConsulta = {
-      ...data,
-      medico: medicoFixo,
-    };
+    const petSelecionado = pets[data.petId];
+
+const novaConsulta = {
+  pet: petSelecionado.nomePet,
+  tutor: petSelecionado.nomeTutor,
+  data: data.data,
+  motivo: data.motivo,
+  medico: medicoFixo.nome,
+};
 
     consultasSalvas.push(novaConsulta);
 
