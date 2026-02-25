@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <div>
-      <h2>PetHealth Lite</h2>
+    <div className="container">
+      <h2>Sistema de Gestão - PetHealth Lite</h2>
 
       <div>
         <Link to="/pets">

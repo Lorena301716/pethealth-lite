@@ -33,16 +33,15 @@ function Consultas() {
 
     const petSelecionado = pets[data.petId];
 
-const novaConsulta = {
-  pet: petSelecionado.nomePet,
-  tutor: petSelecionado.nomeTutor,
-  data: data.data,
-  motivo: data.motivo,
-  medico: medicoFixo.nome,
-};
+    const novaConsulta = {
+      pet: petSelecionado.nomePet,
+      tutor: petSelecionado.nomeTutor,
+      data: data.data,
+      motivo: data.motivo,
+      medico: medicoFixo.nome,
+    };
 
     consultasSalvas.push(novaConsulta);
-
     localStorage.setItem("consultas", JSON.stringify(consultasSalvas));
 
     alert("Consulta agendada com sucesso!");
@@ -50,7 +49,7 @@ const novaConsulta = {
   }
 
   return (
-    <div>
+    <div className="container">
       <h2>Agendamento de Consultas</h2>
 
       <p>

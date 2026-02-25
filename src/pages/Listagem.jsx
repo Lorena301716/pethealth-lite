@@ -14,7 +14,7 @@ function Listagem() {
   }, []);
 
   return (
-    <div>
+    <div className="container">
       <h2>Lista de Pets</h2>
 
       <ul>

@@ -28,7 +28,7 @@ function Pets() {
   }
 
   return (
-    <div>
+    <div className="container">
       <h2>Cadastro de Pets</h2>
 
       <form onSubmit={handleSubmit(onSubmit)}>
