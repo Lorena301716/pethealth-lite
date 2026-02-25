@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Pets from "./pages/Pets";
 import Consultas from "./pages/Consultas";
 import Listagem from "./pages/Listagem";
+import "./App.css";
 
 function App() {
   return (
