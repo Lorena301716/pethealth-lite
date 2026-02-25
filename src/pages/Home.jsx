@@ -5,23 +5,17 @@ function Home() {
     <div className="container">
       <h2>Sistema de Gestão - PetHealth Lite</h2>
 
-      <div>
-        <Link to="/pets">
-          <button>Cadastro de Pets</button>
-        </Link>
-      </div>
+      <Link to="/pets">
+        <button>Cadastro de Pets</button>
+      </Link>
 
-      <div>
-        <Link to="/consultas">
-          <button>Agendar Consulta</button>
-        </Link>
-      </div>
+      <Link to="/consultas">
+        <button>Agendar Consulta</button>
+      </Link>
 
-      <div>
-        <Link to="/listagem">
-          <button>Lista de Pets</button>
-        </Link>
-      </div>
+      <Link to="/listagem">
+        <button>Lista de Pets</button>
+      </Link>
     </div>
   );
 }

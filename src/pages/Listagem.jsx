@@ -15,26 +15,63 @@ function Listagem() {
 
   return (
     <div className="container">
-      <h2>Lista de Pets</h2>
+      <h2>Pacientes Cadastrados</h2>
 
-      <ul>
-        {pets.map((pet, index) => (
-          <li key={index}>
-            {pet.nomePet} - Tutor: {pet.nomeTutor}
-          </li>
-        ))}
-      </ul>
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Espécie</th>
+            <th>Tutor</th>
+          </tr>
+        </thead>
+        <tbody>
+          {pets.length === 0 ? (
+            <tr>
+              <td colSpan="3">Nenhum paciente cadastrado.</td>
+            </tr>
+          ) : (
+            pets.map((pet, index) => (
+              <tr key={index}>
+                <td>{pet.nomePet}</td>
+                <td>{pet.especie}</td>
+                <td>{pet.nomeTutor}</td>
+              </tr>
+            ))
+          )}
+        </tbody>
+      </table>
 
-      <h2>Consultas Agendadas</h2>
+      <h2 style={{ marginTop: "40px" }}>Consultas Agendadas</h2>
 
-      <ul>
-        {consultas.map((consulta, index) => (
-          <li key={index}>
-            {consulta.pet} - {consulta.data} - {consulta.motivo} - Médico:{" "}
-            {consulta.medico}
-          </li>
-        ))}
-      </ul>
+      <table>
+        <thead>
+          <tr>
+            <th>Pet</th>
+            <th>Tutor</th>
+            <th>Data</th>
+            <th>Motivo</th>
+            <th>Médico</th>
+          </tr>
+        </thead>
+        <tbody>
+          {consultas.length === 0 ? (
+            <tr>
+              <td colSpan="5">Nenhuma consulta agendada.</td>
+            </tr>
+          ) : (
+            consultas.map((consulta, index) => (
+              <tr key={index}>
+                <td>{consulta.pet}</td>
+                <td>{consulta.tutor}</td>
+                <td>{consulta.data}</td>
+                <td>{consulta.motivo}</td>
+                <td>{consulta.medico}</td>
+              </tr>
+            ))
+          )}
+        </tbody>
+      </table>
     </div>
   );
 }
